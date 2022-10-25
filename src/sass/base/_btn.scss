@@ -1,0 +1,35 @@
+.btn,
+.btn:link,
+.btn:visited {
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.6rem;
+  color: $color-secondary;
+  cursor: pointer;
+  background-color: $color-primary;
+  transition: transform 0.2s;
+  font-weight: 400;
+  padding: 1.5rem 5rem;
+  border-radius: 30px;
+
+  @include media('<=phone') {
+    padding: 1rem 3rem;
+  }
+
+  &:hover {
+    transform: translateY(-1px);
+
+    span::after {
+      transform-origin: right;
+      left: 0;
+      width: 100%;
+    }
+  }
+
+  &:active,
+  &:focus {
+    outline: none;
+    transform: translateY(-1px);
+    box-shadow: 0 0.5rem 1rem rgba($color-accent, 0.2);
+  }
+}

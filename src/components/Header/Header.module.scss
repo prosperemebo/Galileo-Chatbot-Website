@@ -1,0 +1,93 @@
+@import '../../sass/abstracts/variables';
+
+.header {
+  background-color: $color-secondary;
+  height: calc(100vh - 22rem);
+  color: $color-primary;
+  position: relative;
+
+  @media only screen and (max-width: $layout-breakpoint-small) {
+    height: calc(100vh - 5rem);
+  }
+
+  @media only screen and (max-height: 700px) {
+    height: 85rem;
+  }
+
+  @media only screen and (max-width: 500px) {
+    height: 85rem;
+  }
+
+  .nav {
+    padding: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media only screen and (max-width: $layout-breakpoint-medium) {
+      padding: 3rem;
+    }
+
+    @media only screen and (max-width: $layout-breakpoint-phone) {
+      padding: 1.5rem;
+    }
+
+    .logo {
+      img {
+        width: 12rem;
+      }
+    }
+  }
+
+  .content_box {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translate(0%, -50%);
+    width: 45%;
+
+    @media only screen and (max-width: $layout-breakpoint-medium) {
+      width: 40%;
+    }
+
+    @media only screen and (max-width: $layout-breakpoint-small) {
+      text-align: center;
+      width: 90%;
+      top: 30%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  .hero {
+    position: absolute;
+    right: 10%;
+    bottom: 0;
+    height: calc(100% - 10rem);
+
+    @media only screen and (max-width: $layout-breakpoint-medium) {
+      height: calc(100% - 15rem);
+      right: 6%;
+    }
+
+    @media only screen and (max-width: $layout-breakpoint-small) {
+      height: calc(100% - 40rem);
+      width: 70%;
+      right: unset;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    @media only screen and (max-width: 500px) {
+      width: 95%;
+    }
+
+    img {
+      display: block;
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
+      object-position: bottom;
+    }
+  }
+}
